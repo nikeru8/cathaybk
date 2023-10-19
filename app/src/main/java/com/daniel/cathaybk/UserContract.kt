@@ -5,7 +5,7 @@ import com.daniel.cathaybk.model.UserItem
 interface UserContract {
 
     interface View {
-        fun showUsers(users: List<UserItem>)
+        fun showUsers(users: MutableList<UserItem>)
         fun showError(message: String)
     }
 
