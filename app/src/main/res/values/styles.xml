@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="animationFadeInOut">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+    </style>
+
+    <style name="fullScreenDialogWithoutAnimation" parent="@android:style/Theme.NoTitleBar.Fullscreen">
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowBackground">#99000000</item>
+        <item name="android:windowAnimationStyle">@style/animationFadeInOut</item>
+    </style>
+
+</resources>

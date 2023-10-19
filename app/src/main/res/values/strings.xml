@@ -5,6 +5,7 @@
     <string name="github_user_avatar">GitHub User Avatar</string>
     <string name="github_username">GitHub Username</string>
     <string name="user_status">Status</string>
+    <string name="user_title"> Users %s/%s</string>
 
 
 </resources>

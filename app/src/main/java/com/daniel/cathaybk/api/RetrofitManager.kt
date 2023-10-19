@@ -2,8 +2,6 @@ package com.daniel.cathaybk.api
 
 
 import android.util.Log
-import com.google.gson.Gson
-import com.google.gson.JsonSyntaxException
 import okhttp3.*
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -13,7 +11,7 @@ class RetrofitManager {
 
     companion object {
 
-       private val manager = RetrofitManager()
+        private val manager = RetrofitManager()
 
         var from = ""
 
@@ -23,21 +21,6 @@ class RetrofitManager {
             this.from = from
             return manager.gitHubApiService
 
-        }
-
-
-        //解析string json
-        fun <T> covertObj(content: String, classOfT: Class<T>?): T? {
-
-            val gson = Gson()
-            var obj: T? = null
-            try {
-                obj = gson.fromJson(content, classOfT)
-            } catch (e: JsonSyntaxException) {
-                Log.e("RetrofitManager", "Failed to convert gson:$content")
-                e.printStackTrace()
-            }
-            return obj
         }
 
     }
@@ -78,9 +61,7 @@ class RetrofitManager {
         .client(mOkHttpClient)
         .build()
 
-
     //會員資料
     private val gitHubApiService: GitHubApi = retrofit.create(GitHubApi::class.java)
-
 
 }
