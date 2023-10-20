@@ -1,3 +1,10 @@
+有分頁功能
+MVP
+使用kotlin
+有單元測試
+
+
+
 O# cathaybk TEST
 
 Task
