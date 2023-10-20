@@ -1,4 +1,4 @@
-# cathaybk TEST
+O# cathaybk TEST
 
 Task
 Create一個Android app 顯示 github 使用者在一個列表中 及 使用者資訊
@@ -26,7 +26,9 @@ Notice
 
 ● 額外加分
 
-1.Test case 2.List ui 分頁功能
+1.Test case 
+
+2.List ui 分頁功能
 
 List UI will look like
 
