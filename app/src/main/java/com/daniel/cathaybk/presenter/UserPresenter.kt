@@ -1,6 +1,6 @@
 package com.daniel.cathaybk.presenter
 
-import android.util.Log
+import com.daniel.cathaybk.api.GitHubApi
 import com.daniel.cathaybk.api.RetrofitManager
 import com.daniel.cathaybk.model.User
 import com.daniel.cathaybk.model.UserItem
@@ -8,11 +8,12 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
+class UserPresenter(
+    private val view: UserContract.View,
+    private val retrofit: GitHubApi = RetrofitManager.callHomeFragmentService("首頁"),
+) : UserContract.Presenter {
 
-class UserPresenter(private val view: UserContract.View) : UserContract.Presenter {
-
-    private var since: Int = 0
-    private val retrofit = RetrofitManager.callHomeFragmentService("首頁")
+    var since: Int = 0
 
     override fun fetchUsers() {
 
@@ -31,17 +32,16 @@ class UserPresenter(private val view: UserContract.View) : UserContract.Presente
                     try {
 
                         since = model!!.last().id!!
-                        Log.d("TAG", "CHECK SINCE - ${since}")
 
                     } catch (exception: Exception) {
 
-                        view.showError(response.errorBody()?.string() ?: "Unknown error -${exception}")
+                        view.showError(response.errorBody()?.string() ?: "since is null error - ${exception}")
 
                     }
 
                 } else {
 
-                    view.showError(response.errorBody()?.string() ?: "Unknown error")
+                    view.showError(response.errorBody()?.string() ?: "Unknown error response.isUnsuccessful")
 
                 }
 

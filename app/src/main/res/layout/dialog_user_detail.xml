@@ -27,11 +27,11 @@
             app:layout_constraintTop_toBottomOf="@id/closeIcon" />
 
         <TextView
-            android:textColor="@color/black"
             android:id="@+id/tv_user_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="@id/userAvatar"
             app:layout_constraintStart_toStartOf="@id/userAvatar"
             app:layout_constraintTop_toBottomOf="@id/userAvatar"
@@ -41,10 +41,10 @@
             android:id="@+id/iv_bio_icon"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/ic_launcher_foreground"
             app:layout_constraintEnd_toEndOf="@+id/userAvatar"
             app:layout_constraintStart_toStartOf="@id/userAvatar"
-            app:layout_constraintTop_toBottomOf="@+id/tv_user_name" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_user_name"
+            tools:src="@drawable/ic_launcher_foreground" />
 
         <View
             android:id="@+id/view"

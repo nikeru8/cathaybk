@@ -2,7 +2,8 @@ package com.daniel.cathaybk.model
 import com.google.gson.annotations.SerializedName
 
 
-class User : ArrayList<UserItem>()
+class User : MutableList<UserItem> by mutableListOf()
+
 
 data class UserItem(
     @SerializedName("avatar_url")
